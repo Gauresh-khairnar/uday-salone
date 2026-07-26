@@ -170,7 +170,27 @@ function initHeroSlideshow() {
     'Images/IMG_20250807_075322.jpg',
     'Images/InShot_20240809_105002938.jpg',
     'Images/IMG_3415.JPG.jpeg',
-    'Images/IMG_3421.JPG.jpeg'
+    'Images/IMG_3421.JPG.jpeg',
+    'Images/281A8279.jpg',
+    'Images/281A8282.jpg',
+    'Images/281A8307.jpg',
+    'Images/IMG_20240620_201923_561.jpg',
+    'Images/IMG_20240620_201923_615.jpg',
+    'Images/IMG_20240621_195456_523.jpg',
+    'Images/IMG_20250807_075635.jpg',
+    'Images/mayuri_bride_3.jpg',
+    'Images/mayuri_bride_7.jpg',
+    'Images/mayuri_bride_2.jpg',
+    'Images/mayuri_bride_1.jpg',
+    'Images/01-2.jpg',
+    'Images/02-2.jpg',
+    'Images/03-1.jpg',
+    'Images/09-1.jpg',
+    'Images/0C6A7899.jpg',
+    'Images/0C6A7913.jpg',
+    'Images/2O4A0120..jpg',
+    'Images/2O4A0150..jpg',
+    'Images/IMG-20240619-WA0033.jpg'
   ];
   let currentIndex = 0;
 
