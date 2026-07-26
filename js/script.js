@@ -64,6 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---- Services Page Tabs ---- */
   initServicesTabs();
 
+  /* ---- Hero Slideshow ---- */
+  initHeroSlideshow();
+
 });
 
 /* ========================================================
@@ -151,6 +154,46 @@ function initScrollReveal() {
   }, { threshold: 0.12 });
 
   items.forEach(item => observer.observe(item));
+}
+
+/* ========================================================
+   HERO SLIDESHOW
+   Changes hero image every 5 seconds with fade effect.
+======================================================== */
+function initHeroSlideshow() {
+  const heroImage = document.getElementById('heroImage');
+  const heroBg = document.querySelector('.hero-parallax-bg');
+  if (!heroImage) return;
+
+  const images = [
+    'Images/IMG_20241006_100659.jpg',
+    'Images/IMG_20250807_075322.jpg',
+    'Images/InShot_20240809_105002938.jpg',
+    'Images/IMG_3415.JPG.jpeg',
+    'Images/IMG_3421.JPG.jpeg'
+  ];
+  let currentIndex = 0;
+
+  heroImage.style.transition = 'opacity 0.5s ease-in-out';
+  if (heroBg) {
+    heroBg.style.transition = 'opacity 0.5s ease-in-out';
+  }
+
+  setInterval(() => {
+    heroImage.style.opacity = '0';
+    if (heroBg) heroBg.style.opacity = '0';
+    
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      heroImage.src = images[currentIndex];
+      heroImage.style.opacity = '1';
+      
+      if (heroBg) {
+        heroBg.style.backgroundImage = `url('${images[currentIndex]}')`;
+        heroBg.style.opacity = '0.15';
+      }
+    }, 500);
+  }, 5000);
 }
 
 /* ========================================================
