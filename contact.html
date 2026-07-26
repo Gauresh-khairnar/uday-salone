@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#E1B382" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Book Your Appointment | Uday Beauty Salon Chalisgaon</title>
+  <meta name="description" content="Book a bridal appointment or beauty consultation at Uday Beauty Salon in Chalisgaon. Contact us via phone, WhatsApp, or our online booking form." />
+  <meta name="keywords" content="Book Bridal Makeup Chalisgaon, Beauty Salon Appointment Chalisgaon, Contact Uday Beauty, Makeup Booking Dhule Jalgaon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ======== NAVBAR ======== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/images/logo.jpeg" alt="Uday Beauty Logo" class="nav-logo-img" />
+          <div class="nav-logo-text">
+            <span class="logo-main">Uday Beauty</span>
+            <span class="logo-sub">Salon · Studio · Academy</span>
+          </div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="academy.html">Academy</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="active nav-cta">Book Now</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======== PAGE HERO ======== -->
+  <section class="page-hero" aria-label="Contact page hero">
+    <div class="container">
+      <div class="page-hero-content reveal">
+        <p class="section-label">✦ Reserve Your Date ✦</p>
+        <h1 class="section-title">Book Your <span class="text-gradient">Dream</span><br />Appointment</h1>
+        <p class="section-subtitle" style="margin:0 auto; text-align:center;">
+          Fill in the form below or WhatsApp us directly. We'll confirm your slot within 24 hours.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CONTACT SECTION ======== -->
+  <section aria-label="Contact form and information">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Info Column -->
+        <div style="display:flex; flex-direction:column; gap:28px;">
+          <!-- Info Card -->
+          <div class="glass-card contact-info-card reveal" id="contactInfo">
+            <h2>Let's Connect 💫</h2>
+            <p>We're here to make your beauty journey as seamless as your transformation. Reach out to us through any channel that works best for you.</p>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📞</div>
+              <div class="contact-detail-text">
+                <span class="detail-label">Call Us</span>
+                <a href="tel:+917030901505" class="detail-value">+91 7030901505</a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon" style="animation-delay:1s;">💬</div>
+              <div class="contact-detail-text">
+                <span class="detail-label">WhatsApp</span>
+                <a href="https://wa.me/917030901505" target="_blank" rel="noopener noreferrer" class="detail-value">+91 7030901505</a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon" style="animation-delay:2s;">📍</div>
+              <div class="contact-detail-text">
+                <span class="detail-label">Visit Us</span>
+                <span class="detail-value">Uday Beauty Salon, Makeup Studio & Academy,<br />M. Fule Colony, Behind Ghate Complex, Bhadgaon Road, Chalisgaon – 424101</span>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon" style="animation-delay:3s;">🕐</div>
+              <div class="contact-detail-text">
+                <span class="detail-label">Working Hours</span>
+                <span class="detail-value">Monday – Saturday: 9:00 AM – 8:00 PM<br />Sunday: 10:00 AM – 5:00 PM</span>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon" style="animation-delay:4s;">✉️</div>
+              <div class="contact-detail-text">
+                <span class="detail-label">Email</span>
+                <a href="mailto:udaybeautysalon@gmail.com" class="detail-value">udaybeautysalon@gmail.com</a>
+              </div>
+            </div>
+
+            <!-- Quick WhatsApp Button -->
+            <a href="https://wa.me/917030901505?text=Hi%20Uday%20Beauty!%20I%27d%20like%20to%20book%20an%20appointment." 
+               class="btn btn-primary" style="margin-top:28px; width:100%; justify-content:center;" 
+               id="contactWaBtn" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Instant Book via WhatsApp
+            </a>
+          </div>
+
+          <!-- UPI QR Card -->
+          <div class="glass-card reveal upi-qr-card" style="padding:28px; text-align:center; border: 1.5px solid var(--rose-gold); box-shadow: var(--shadow-gold);" id="upiQrCard">
+            <h3 style="color:var(--rose-gold); font-family:var(--font-heading); font-size:1.3rem; margin-bottom:8px;">💳 Scan to Pay via UPI</h3>
+            <p style="font-size:0.82rem; color:rgba(253,253,253,0.7); line-height:1.6; margin-bottom:16px;">
+              50% advance required to confirm bridal/groom booking.<br/>Scan using GPay, PhonePe, Paytm or any UPI app.
+            </p>
+            <div class="qr-code-wrapper" style="width:200px; height:200px; margin:0 auto 16px auto; padding:10px; background:#ffffff; border-radius:14px; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 32px rgba(225,179,130,0.25), 0 2px 12px rgba(0,0,0,0.4);">
+              <img src="assets/images/upi_qr.png" alt="UPI Payment QR Code - Yogesh Sonawane" style="width:100%; height:100%; object-fit:contain; border-radius:6px;" id="upiQrImg" />
+            </div>
+            <div style="background:rgba(225,179,130,0.12); border:1px solid rgba(225,179,130,0.35); border-radius:10px; padding:10px 14px; margin-bottom:10px;">
+              <span style="display:block; font-size:0.72rem; color:rgba(253,253,253,0.55); letter-spacing:0.05em; text-transform:uppercase; margin-bottom:4px;">UPI ID</span>
+              <span style="display:block; font-size:1rem; font-weight:700; color:var(--rose-gold); letter-spacing:0.02em; font-family:var(--font-heading);">7030901505@ybl</span>
+            </div>
+            <span style="display:block; font-size:0.88rem; font-weight:600; color:var(--pearl);">Yogesh Sonawane</span>
+            <span style="display:block; font-size:0.72rem; color:rgba(253,253,253,0.45); margin-top:4px;">UPI · GPay · PhonePe · Paytm</span>
+          </div>
+        </div>
+
+        <!-- Booking Form -->
+        <div class="glass-card booking-form reveal" id="bookingForm">
+          <h2 class="form-title">Book Your Appointment</h2>
+          <p class="form-subtitle">We'll confirm within 24 hours. * Required fields.</p>
+
+          <form id="appointmentForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Priya" required autocomplete="given-name" />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Sharma" required autocomplete="family-name" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone / WhatsApp Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel" />
+            </div>
+
+            <div class="form-group">
+              <label for="serviceType">Service Required *</label>
+              <select id="serviceType" name="serviceType" required>
+                <option value="" disabled selected>Select a Service…</option>
+                <optgroup label="Bridal Packages">
+                  <option value="glow-bridal">Glow Bridal Package (₹15,000+)</option>
+                  <option value="hd-bridal">HD Bridal Package (₹20,000+)</option>
+                  <option value="royal-bridal">Royal Bridal Package (₹30,000+)</option>
+                  <option value="premium-bridal">Premium Bridal Package (₹40,000+)</option>
+                </optgroup>
+                <optgroup label="Bridal Makeup Tiers">
+                  <option value="classic-bridal">Classic Bridal Makeup (₹4,999)</option>
+                  <option value="hd-glass-bridal">HD Glass Finish Bridal Makeup (₹6,999)</option>
+                  <option value="airbrush-bridal">Airbrush Bridal Makeup (₹8,999)</option>
+                  <option value="signature-bridal">Signature Bridal Look (₹10,999)</option>
+                  <option value="vedic-bridal">Vedic Bridal Look (₹6,999)</option>
+                  <option value="reception-bridal">Reception / Varmala Look (₹6,999)</option>
+                </optgroup>
+                <optgroup label="Occasion & Event Makeup">
+                  <option value="soft-glam-engagement">Soft Glam Engagement (₹4,999)</option>
+                  <option value="hd-engagement">HD Engagement Makeup (₹5,999)</option>
+                  <option value="haldi-glam">Haldi Glam Bridal Look (₹4,999+)</option>
+                  <option value="hd-mehendi">HD Mehendi Look (₹2,999+)</option>
+                  <option value="sangeet-carnival">Sangeet / Carnival Special (₹3,999+)</option>
+                  <option value="basic-party">Basic Party Makeup (₹999+)</option>
+                  <option value="hd-party">HD Party Makeup (₹1,499+)</option>
+                </optgroup>
+                <optgroup label="Groom Grooming">
+                  <option value="groom-makeup">Groom Makeup Package (₹15,000+)</option>
+                  <option value="natural-groom">Premium Natural Groom Makeup (₹1,499+)</option>
+                  <option value="groom-skin-prep">Groom Skin Prep</option>
+                </optgroup>
+                <optgroup label="Add-On / Special Occasions">
+                  <option value="photoshoot-makeup">Photoshoot & Portfolio Makeup (₹1,999+)</option>
+                  <option value="baby-shower">Baby Shower Makeup (₹2,499+)</option>
+                  <option value="pre-wedding">Pre-Wedding / Theme Shoot (₹2,999+)</option>
+                </optgroup>
+                <optgroup label="Salon & Beauty Services">
+                  <option value="hair-care">Hair Care & Styling Services</option>
+                  <option value="skin-care">Skin Care & Beauty Services</option>
+                </optgroup>
+                <optgroup label="Academy Inquiry">
+                  <option value="academy-foundation">Hair + Skin + Makeup Foundation (3 Months)</option>
+                  <option value="academy-diploma">Master Diploma in Hair, Skin & Makeup (6 Months)</option>
+                  <option value="academy-self">Self Makeup Workshop (3 Days)</option>
+                  <option value="academy-basic">Basic Makeup Course (5 Days)</option>
+                  <option value="academy-bridal">Bridal Makeup Course (15 Days)</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="appointDate">Preferred Date *</label>
+                <input type="date" id="appointDate" name="appointDate" required />
+              </div>
+              <div class="form-group">
+                <label for="appointTime">Preferred Time</label>
+                <select id="appointTime" name="appointTime">
+                  <option value="" disabled selected>Select Time</option>
+                  <option>9:00 AM – 10:00 AM</option>
+                  <option>10:00 AM – 11:00 AM</option>
+                  <option>11:00 AM – 12:00 PM</option>
+                  <option>12:00 PM – 1:00 PM</option>
+                  <option>2:00 PM – 3:00 PM</option>
+                  <option>3:00 PM – 4:00 PM</option>
+                  <option>4:00 PM – 5:00 PM</option>
+                  <option>5:00 PM – 6:00 PM</option>
+                  <option>6:00 PM – 7:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Special Requests or Notes</label>
+              <textarea id="message" name="message" placeholder="Eg: Bridal date is Apr 25, looking for a traditional Maharashtrian look…"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-glow" id="submitForm" style="width:100%; justify-content:center; font-size:1rem; padding:18px;">
+              ✨ Confirm My Appointment
+            </button>
+            <p id="formMsg" style="text-align:center; margin-top:16px; font-size:0.82rem; color:var(--rose-gold); display:none;"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== GOOGLE MAP ======== -->
+  <section style="padding-top:0;" aria-label="Salon location map">
+    <div class="container">
+      <div class="reveal" style="margin-bottom:24px;">
+        <p class="section-label">✦ Find Us</p>
+        <h2 class="section-title">We're in the Heart of <span class="text-gradient">Chalisgaon</span></h2>
+      </div>
+      <div class="map-container reveal" id="mapContainer">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30142.29694395!2d75.01469!3d20.45820!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb198d5a5f76e1%3A0x1f6b8456c9e2f39!2sChalisgaon%2C%20Maharashtra%20424101!5e0!3m2!1sen!2sin!4v1686000000000!5m2!1sen!2sin"
+          width="100%" 
+          height="420" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Uday Beauty Salon location on Google Maps, Chalisgaon"
+          aria-label="Google Maps showing Uday Beauty Salon location in Chalisgaon">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FAQ ======== -->
+  <section aria-label="Frequently asked questions">
+    <div class="container">
+      <div class="reveal" style="text-align:center; margin-bottom:50px;">
+        <p class="section-label">✦ Got Questions?</p>
+        <h2 class="section-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
+      </div>
+      <div style="max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:16px;">
+        <details class="glass-card reveal" style="padding:24px 28px;" id="faq1">
+          <summary style="cursor:pointer; font-family:var(--font-heading); font-size:1.1rem; color:var(--rose-gold); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+            How far in advance should I book for bridal services?
+            <span style="font-size:1.4rem; transition:transform 0.3s;">+</span>
+          </summary>
+          <p style="margin-top:16px; color:rgba(253,253,253,0.6); font-size:0.88rem; line-height:1.8;">
+            We recommend booking at least 4–8 weeks before your wedding date. For peak wedding season (October–February), 3 months in advance is ideal to secure your preferred date and time.
+          </p>
+        </details>
+        <details class="glass-card reveal" style="padding:24px 28px;" id="faq2">
+          <summary style="cursor:pointer; font-family:var(--font-heading); font-size:1.1rem; color:var(--rose-gold); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+            Do you offer a trial makeup session before the wedding?
+            <span style="font-size:1.4rem;">+</span>
+          </summary>
+          <p style="margin-top:16px; color:rgba(253,253,253,0.6); font-size:0.88rem; line-height:1.8;">
+            Yes! We highly recommend a trial session 2–4 weeks before your wedding. The Royal Bride Bundle includes a complimentary trial consultation with your artist.
+          </p>
+        </details>
+        <details class="glass-card reveal" style="padding:24px 28px;" id="faq3">
+          <summary style="cursor:pointer; font-family:var(--font-heading); font-size:1.1rem; color:var(--rose-gold); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+            What products do you use? Are they skin-safe?
+            <span style="font-size:1.4rem;">+</span>
+          </summary>
+          <p style="margin-top:16px; color:rgba(253,253,253,0.6); font-size:0.88rem; line-height:1.8;">
+            We use premium, dermatologist-tested brands including MAC, HD Pro, Lakme Absolute, and Huda Beauty. All products are non-comedogenic and suitable for sensitive skin.
+          </p>
+        </details>
+        <details class="glass-card reveal" style="padding:24px 28px;" id="faq4">
+          <summary style="cursor:pointer; font-family:var(--font-heading); font-size:1.1rem; color:var(--rose-gold); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+            Do you provide at-home bridal makeup services?
+            <span style="font-size:1.4rem;">+</span>
+          </summary>
+          <p style="margin-top:16px; color:rgba(253,253,253,0.6); font-size:0.88rem; line-height:1.8;">
+            Yes, we offer at-home bridal service within Chalisgaon and nearby areas. An additional travel charge may apply for locations beyond a 10 km radius.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Uday Beauty Home">
+            <img src="assets/images/logo.jpeg" alt="Uday Beauty Logo" class="footer-logo-img" />
+            <div class="footer-logo-text">
+              <span class="logo-main">Uday Beauty</span>
+              <span class="logo-sub">Salon · Studio · Academy</span>
+            </div>
+          </a>
+          <p>Your most beautiful day begins with Uday Beauty. Transforming brides in Chalisgaon since 2012.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/share/14qCMHMjShj/" target="_blank" class="social-pill" aria-label="Facebook Makeup Studio">👍 FB - Makeup Studio</a>
+            <a href="https://www.facebook.com/share/1ChvfpWyxH/" target="_blank" class="social-pill" aria-label="Facebook Salon">👍 FB - Salon</a>
+            <a href="https://www.instagram.com/udaymakeupstudio_academy?igsh=aDlqM3J6NDI4anAy" target="_blank" class="social-pill" aria-label="Instagram Makeup Studio">📸 IG - Makeup Studio</a>
+            <a href="https://www.instagram.com/udaybeautysalon_academy?igsh=MTB6dWdmMDYwc3h3ZQ==" target="_blank" class="social-pill" aria-label="Instagram Salon">📸 IG - Salon</a>
+            <a href="#" target="_blank" class="social-pill" aria-label="Google Review">&#11088; Leave a Review</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="academy.html">Academy</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Book Appointment</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Bridal Makeup</a></li>
+            <li><a href="services.html">Royal Bride Bundle</a></li>
+            <li><a href="services.html">Hair Styling</a></li>
+            <li><a href="services.html">Party Makeup</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Reach Us</h4>
+          <ul>
+            <li><a href="tel:+917030901505">📞 +91 7030901505</a></li>
+            <li><a href="mailto:udaybeautysalon@gmail.com">✉️ Email Us</a></li>
+            <li><a href="#mapContainer">📍 Bhadgaon Road, Chalisgaon</a></li>
+            <li><a href="#">🕐 Mon–Sat: 9 AM – 8 PM</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="areas-served">
+        <h5>📍 Areas We Serve</h5>
+        <p>Uday Beauty Salon serves clients from <strong>Chalisgaon</strong>, Dhule, Jalgaon, Pachora, Manmad, Nandgaon, Kopargaon, Shrirampur, Yeola, Chandwad, Nashik, and nearby areas of Nashik & Dhule districts. Bridal Makeup Artist Chalisgaon | Home Makeup Service Dhule | Top Beauty Parlour Jalgaon District.</p>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Uday Beauty Salon, Make-up Studio & Academy, Chalisgaon. All Rights Reserved.</p>
+        <p style="color:rgba(225,179,130,0.4);">Crafted with ♥ for every bride. Made With RGAi Technology</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======== FLOATING WHATSAPP ======== -->
+  <a href="https://wa.me/917030901505?text=Hi%20Uday%20Beauty!%20I%27d%20like%20to%20book%20an%20appointment." 
+     class="wa-float" id="waFloat" target="_blank" rel="noopener noreferrer" aria-label="Book via WhatsApp">
+    <svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <div class="wa-float-text">
+      <span>Book via WhatsApp</span>
+      <span>Instant Reply · Open Now</span>
+    </div>
+  </a>
+
+  <script src="js/script.js"></script>
+  <script>
+    /* Form submission handler */
+    const form = document.getElementById('appointmentForm');
+    const msg  = document.getElementById('formMsg');
+    if (form) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const phone   = document.getElementById('phone').value;
+        const name    = document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value;
+        const service = document.getElementById('serviceType').value;
+        const date    = document.getElementById('appointDate').value;
+        const message = document.getElementById('message').value;
+        const waText  = encodeURIComponent(`Hi Uday Beauty! My name is ${name}. I'd like to book a *${service}* appointment on *${date}*. ${message ? 'Notes: ' + message : ''}`);
+        window.open(`https://wa.me/917030901505?text=${waText}`, '_blank');
+        msg.style.display = 'block';
+        msg.textContent = '✅ Redirecting to WhatsApp to confirm your booking!';
+      });
+    }
+  </script>
+</body>
+</html>

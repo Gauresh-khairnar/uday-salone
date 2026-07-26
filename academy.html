@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#E1B382" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Beauty Academy | Uday Beauty Salon Chalisgaon | Certified Makeup Courses</title>
+  <meta name="description" content="Join Uday Beauty Academy in Chalisgaon — Certified Makeup Artistry, Bridal Makeup Masterclass, Hair Styling Courses. 300+ professionals trained. Enroll now!" />
+  <meta name="keywords" content="Makeup Academy Chalisgaon, Beauty Course Dhule, Makeup Artistry Course Jalgaon, Bridal Makeup Training Maharashtra" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .masonry-placeholder {
+      border-radius: 16px;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(225,179,130,0.1), rgba(212,175,55,0.06));
+      border: 1px solid rgba(225,179,130,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      position: relative;
+    }
+    .masonry-placeholder::after {
+      content: attr(data-label);
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--rose-gold);
+      background: rgba(0,0,0,0.6);
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    .course-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    .course-table th, .course-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid rgba(225,179,130,0.1);
+      font-size: 0.85rem;
+    }
+    .course-table th {
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--rose-gold);
+      font-weight: 600;
+    }
+    .course-table td { color: rgba(253,253,253,0.65); }
+    .course-table tr:last-child td { border-bottom: none; }
+    .badge-pill {
+      background: rgba(225,179,130,0.1);
+      border: 1px solid rgba(225,179,130,0.25);
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: 0.68rem;
+      color: var(--rose-gold);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======== NAVBAR ======== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/images/logo.jpeg" alt="Uday Beauty Logo" class="nav-logo-img" />
+          <div class="nav-logo-text">
+            <span class="logo-main">Uday Beauty</span>
+            <span class="logo-sub">Salon · Studio · Academy</span>
+          </div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="academy.html" class="active" role="menuitem">Academy</a></li>
+          <li><a href="gallery.html" role="menuitem">Gallery</a></li>
+          <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======== PAGE HERO ======== -->
+  <section class="page-hero" aria-label="Academy hero">
+    <div class="container">
+      <div class="page-hero-content reveal">
+        <p class="section-label">✦ Uday Beauty Academy ✦</p>
+        <h1 class="section-title">Build a Career as a <br /><span class="text-gradient">Certified Beauty Artist</span></h1>
+        <p class="section-subtitle" style="margin:0 auto; text-align:center;">
+          Chalisgaon's most trusted beauty academy — where artistic passion meets professional mastery.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== STATS BAND ======== -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-bar-inner">
+        <div class="trust-item reveal">
+          <span class="trust-icon">🎓</span>
+          <div class="trust-info">
+            <span class="trust-title">300+ Graduates</span>
+            <span class="trust-sub">Placed Across Maharashtra</span>
+          </div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item reveal">
+          <span class="trust-icon">📜</span>
+          <div class="trust-info">
+            <span class="trust-title">Certified Courses</span>
+            <span class="trust-sub">Industry-Recognized Diplomas</span>
+          </div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item reveal">
+          <span class="trust-icon">🏆</span>
+          <div class="trust-info">
+            <span class="trust-title">Expert Faculty</span>
+            <span class="trust-sub">12+ Years Experience</span>
+          </div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item reveal">
+          <span class="trust-icon">💼</span>
+          <div class="trust-info">
+            <span class="trust-title">100% Support</span>
+            <span class="trust-sub">Placement Assistance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== MEET THE EDUCATOR ======== -->
+  <section class="about-section" id="meetEducator" aria-label="Meet the Lead Educator">
+    <div class="container">
+      <div class="about-inner reveal">
+        <div class="about-image-column">
+          <div class="about-image-wrapper float-slow">
+            <img src="Images/Owner.png" alt="Yogesh Sonawane Portrait" class="about-profile-img" />
+            <div class="about-experience-badge glass">
+              <span class="badge-num">15+</span>
+              <span class="badge-text">Years Teaching</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content-column">
+          <p class="section-label">🎓 Lead Educator & Founder</p>
+          <h2 class="section-title">Yogesh <span class="text-gradient">Sonawane</span></h2>
+          <p class="about-lead">Empowering Aspiring Beauty Artists Since 2012</p>
+          <p class="about-text">
+            I am Yogesh Sonawane, a Professional Bridal Makeup Artist & Lead Educator at Uday Makeup Academy. With over 15 years of industry experience, I have trained hundreds of successful makeup artists and beauty therapists who now run thriving businesses or work in premium salons.
+          </p>
+          <p class="about-text">
+            My teaching philosophy focuses on hands-on practical training, live model practice, and deep product knowledge rather than just theory. Through my academy, I aim to equip every student with advanced global techniques, client handling skills, and social media guidance so they are 100% industry-ready from day one.
+          </p>
+          <p class="about-text">
+            Whether you are a complete beginner looking to start a career or a professional looking to upgrade your skills, I invite you to join our family and start your beauty masterclass journey with us.
+          </p>
+          
+          <div class="about-signature-block">
+            <img src="assets/images/signature.jpg" alt="Yogesh Sonawane Signature" class="digital-signature" />
+            <div class="signature-details">
+              <span class="sig-name">Yogesh Sonawane</span>
+              <span class="sig-title">Master Bridal Educator</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== VIRTUAL LOOKBOOK ======== -->
+  <section aria-label="Student masterpieces gallery">
+    <div class="container">
+      <div class="reveal" style="margin-bottom:60px;">
+        <p class="section-label">✦ Virtual Lookbook</p>
+        <h2 class="section-title">Student <span class="text-gradient">Masterpieces</span></h2>
+        <p class="section-subtitle">Every look below was created by our students during training — proof that artistry is born here.</p>
+      </div>
+
+      <div class="lookbook-masonry reveal" id="lookbookGallery">
+        <!-- Row 1 -->
+        <div class="lookbook-item">
+          <img src="Images/IMG-20240619-WA0033.jpg" alt="Bridal masterpiece by Uday Academy student" style="width:100%; height:auto; display:block;" />
+          <div class="lookbook-overlay"><span class="lookbook-tag">Bridal Look</span></div>
+        </div>
+        <div class="lookbook-item">
+          <img src="Images/02-2.jpg" alt="Smokey Eye" style="width:100%; height:auto; display:block;" />
+          <div class="lookbook-overlay"><span class="lookbook-tag">Smokey Eye</span></div>
+        </div>
+        <div class="lookbook-item">
+          <img src="Images/03-1.jpg" alt="Festive Glam" style="width:100%; height:auto; display:block;" />
+          <div class="lookbook-overlay"><span class="lookbook-tag">Festive Glam</span></div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="lookbook-item">
+          <img src="Images/09-1.jpg" alt="Editorial Look" style="width:100%; height:auto; display:block;" />
+          <div class="lookbook-overlay"><span class="lookbook-tag">Editorial</span></div>
+        </div>
+        <div class="lookbook-item">
+          <img src="Images/IMG_20241006_100659.jpg" alt="Luxury bridal masterpiece by Uday Academy" style="width:100%; height:auto; display:block;" />
+          <div class="lookbook-overlay"><span class="lookbook-tag">Royal Bridal</span></div>
+        </div>
+        <div class="lookbook-item">
+          <img src="Images/0C6A7899.jpg" alt="Hair Art" style="width:100%; height:auto; display:block;" />
+          <div class="lookbook-overlay"><span class="lookbook-tag">Hair Art</span></div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="lookbook-item">
+          <img src="Images/0C6A7913.jpg" alt="Party Glam" style="width:100%; height:auto; display:block;" />
+          <div class="lookbook-overlay"><span class="lookbook-tag">Party Glam</span></div>
+        </div>
+        <div class="lookbook-item">
+          <img src="Images/2O4A0120..jpg" alt="Airbrush Makeup" style="width:100%; height:auto; display:block;" />
+          <div class="lookbook-overlay"><span class="lookbook-tag">Airbrush</span></div>
+        </div>
+        <div class="lookbook-item">
+          <img src="Images/2O4A0150..jpg" alt="Natural Glow" style="width:100%; height:auto; display:block;" />
+          <div class="lookbook-overlay"><span class="lookbook-tag">Natural Glow</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== COURSES ======== -->
+  <section style="background:linear-gradient(180deg, #111, var(--charcoal));" aria-label="Academy courses">
+    <div class="container">
+      <div class="reveal" style="margin-bottom:50px;">
+        <p class="section-label">✦ Our Programmes</p>
+        <h2 class="section-title">Choose Your <span class="text-gradient">Transformation</span></h2>
+        <p class="section-subtitle">Flexible durations, expert mentorship, and real-world practice on live clients.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:28px;">
+        <!-- Course 1 -->
+        <div class="glass-card reveal" style="padding:40px 32px;" id="course1">
+          <span style="font-size:2.5rem; display:block; margin-bottom:16px; animation:float 5s ease-in-out infinite;">💇‍♀️</span>
+          <span class="badge-pill">Most Popular</span>
+          <h3 style="font-family:var(--font-heading); font-size:1.6rem; color:var(--rose-gold); margin:14px 0 10px;">Hair + Skin + Makeup Foundation Course</h3>
+          <p style="font-size:0.85rem; color:rgba(253,253,253,0.55); line-height:1.7; margin-bottom:20px;">Affordable professional foundation training for Salon jobs, freelancing, or launching your own business. Practical based.</p>
+          
+          <table class="course-table">
+            <tr><th>Duration</th><th>Level</th><th>Certificate</th></tr>
+            <tr><td>3 Months</td><td>Beginner Friendly</td><td>✅ Included</td></tr>
+          </table>
+
+          <div class="syllabus-accordion">
+            <div class="syllabus-fee-card">
+              <div class="syllabus-fee-row"><span>Course Fees:</span><strong>₹25,000 Only</strong></div>
+              <div class="syllabus-fee-row"><span>Installments:</span><span>Easy EMI Available</span></div>
+              <div class="syllabus-fee-row"><span>Timings:</span><span>2:00 PM – 5:00 PM</span></div>
+            </div>
+            
+            <details class="syllabus-details">
+              <summary class="syllabus-summary">View Full Syllabus</summary>
+              <div class="syllabus-content">
+                <div class="syllabus-list">
+                  <div class="syllabus-item">
+                    <span class="syllabus-item-icon">💇‍♀️</span>
+                    <span><strong>Hair Care:</strong> Sectioning, texture, scissor handling, cuts (U, Layer, Bob, Feather), blow dry, ironing, curls, hair spa, global colouring & root touch-up.</span>
+                  </div>
+                  <div class="syllabus-item">
+                    <span class="syllabus-item-icon">🌸</span>
+                    <span><strong>Skin Care:</strong> Skin types/analysis, products, threading, waxing, bleach & D-tan, cleanups, basic facials (fruit, herbal, hydrating), manicure, pedicure, home care.</span>
+                  </div>
+                  <div class="syllabus-item">
+                    <span class="syllabus-item-icon">💄</span>
+                    <span><strong>Makeup:</strong> Face shapes, prep, products, foundation matching, concealer/colour correction, eye makeup, party look, basic bridal look.</span>
+                  </div>
+                  <div class="syllabus-item">
+                    <span class="syllabus-item-icon">💇‍♀️</span>
+                    <span><strong>Hairstyles:</strong> Basic bridal bun, messy bun, simple braids, ponytails, reception curls, flowers & accessories setting.</span>
+                  </div>
+                  <div class="syllabus-item">
+                    <span class="syllabus-item-icon">👗</span>
+                    <span><strong>Saree Draping:</strong> Regular, traditional, Nauvari basics, dupatta/shela setting.</span>
+                  </div>
+                  <div class="syllabus-item">
+                    <span class="syllabus-item-icon">📱</span>
+                    <span><strong>Career:</strong> Reels guidance, before/after photography, client handling, communication, job & freelancing guidance.</span>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <a href="https://wa.me/917030901505?text=Hi%20Uday%20Academy!%20I%27m%20interested%20in%20the%203-Month%20Foundation%20Course." class="btn btn-primary" style="margin-top:24px; width:100%; justify-content:center;" target="_blank" rel="noopener noreferrer">Enquire on WhatsApp →</a>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="glass-card reveal" style="padding:40px 32px;" id="course2">
+          <span style="font-size:2.5rem; display:block; margin-bottom:16px; animation:float 5s ease-in-out 1.2s infinite;">👑</span>
+          <span class="badge-pill" style="background:rgba(212,175,55,0.1); border-color:rgba(212,175,55,0.3); color:var(--champagne);">Premium Career Course</span>
+          <h3 style="font-family:var(--font-heading); font-size:1.6rem; color:var(--rose-gold); margin:14px 0 10px;">Master Diploma in Hair, Skin & Makeup</h3>
+          <p style="font-size:0.85rem; color:rgba(253,253,253,0.55); line-height:1.7; margin-bottom:20px;">Beginner to Professional step-by-step complete career training. 90% practical learning, client experience, and portfolio creation.</p>
+          
+          <table class="course-table">
+            <tr><th>Duration</th><th>Level</th><th>Certificate</th></tr>
+            <tr><td>6 Months</td><td>Beginner → Pro</td><td>✅ Master Diploma</td></tr>
+          </table>
+
+          <div class="syllabus-accordion">
+            <div class="syllabus-fee-card">
+              <div class="syllabus-fee-row"><span>Course Fees:</span><strong>₹45,000 Only</strong></div>
+              <div class="syllabus-fee-row"><span>Installments:</span><span>₹10,000 Admission + EMI</span></div>
+              <div class="syllabus-fee-row"><span>Timings:</span><span>2:00 PM – 5:00 PM</span></div>
+            </div>
+            
+            <details class="syllabus-details">
+              <summary class="syllabus-summary">View Full Syllabus</summary>
+              <div class="syllabus-content">
+                <div class="syllabus-list">
+                  <div class="syllabus-item">
+                    <span class="syllabus-item-icon">Phase 1</span>
+                    <span><strong>Foundation Training:</strong> Basic hair knowledge, skin care, makeup, products, grooming, client handling.</span>
+                  </div>
+                  <div class="syllabus-item">
+                    <span class="syllabus-item-icon">Phase 2</span>
+                    <span><strong>Advanced Professional:</strong> Butterfly/Wolf cuts, chemical treatments (botox, smoothening, nanoplastia), coloring wheel, highlights, balayage, advanced skin treatments, HD bridal makeup, bridal Bun/messy buns, Nauvari/Gujarati/Lehenga draping.</span>
+                  </div>
+                  <div class="syllabus-item">
+                    <span class="syllabus-item-icon">Phase 3</span>
+                    <span><strong>Career & Business:</strong> Social media training, photography, Reels making, portfolio shoot, booking management, pricing guidance, business setup.</span>
+                  </div>
+                  <div class="syllabus-item">
+                    <span class="syllabus-item-icon">💇‍♀️</span>
+                    <span><strong>Hair Syllabus:</strong> structure & bonds, pH scale, advanced cutting/styling, hair botox, smoothening, global & highlight coloring, balayage, streaks.</span>
+                  </div>
+                  <div class="syllabus-item">
+                    <span class="syllabus-item-icon">🌸</span>
+                    <span><strong>Skin Syllabus:</strong> Skin layers, pH, facials (Gold, Diamond, Pearl, Brightening, Hydra Facial, anti-ageing), Rica/Brazilian waxing, manicure, pedicure, body spa.</span>
+                  </div>
+                  <div class="syllabus-item">
+                    <span class="syllabus-item-icon">💄</span>
+                    <span><strong>Makeup Syllabus:</strong> HD makeup, waterproof, eye makeup variations (smokey, cut crease, halo, glitter), Haldi, Vedic, Reception, Western looks, lashes & lenses.</span>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <a href="https://wa.me/917030901505?text=Hi%20Uday%20Academy!%20I%27d%20like%20to%20know%20more%20about%20the%206-Month%20Master%20Diploma." class="btn btn-primary" style="margin-top:24px; width:100%; justify-content:center;" target="_blank" rel="noopener noreferrer">Enquire on WhatsApp →</a>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="glass-card reveal" style="padding:40px 32px;" id="course3">
+          <span style="font-size:2.5rem; display:block; margin-bottom:16px; animation:float 5s ease-in-out 2.4s infinite;">💄</span>
+          <h3 style="font-family:var(--font-heading); font-size:1.6rem; color:var(--rose-gold); margin:14px 0 10px;">3 Days Self Makeup Workshop</h3>
+          <p style="font-size:0.85rem; color:rgba(253,253,253,0.55); line-height:1.7; margin-bottom:20px;">Perfect for college girls, housewives, and beginners wanting to learn basic everyday look, styling, and grooming.</p>
+          
+          <table class="course-table">
+            <tr><th>Duration</th><th>Fees</th><th>Certificate</th></tr>
+            <tr><td>3 Days</td><td>₹2,999 Only</td><td>✅ Included</td></tr>
+          </table>
+
+          <div class="syllabus-accordion" style="border:none; padding-top:0;">
+            <div class="syllabus-fee-card" style="margin-top:20px; margin-bottom:0;">
+              <ul style="display:flex; flex-direction:column; gap:8px; font-size:0.8rem; color:rgba(253,253,253,0.7);">
+                <li>✨ Skin Prep & daily makeup looks</li>
+                <li>✨ Basic eye makeup & lipstick styles</li>
+                <li>✨ Simple hairstyle & self saree draping</li>
+                <li>✨ Self makeup kit guidance & practice</li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="https://wa.me/917030901505?text=Hi%20Uday%20Academy!%20I%27m%20interested%20in%20the%203-Day%20Self%20Makeup%20Workshop." class="btn btn-primary" style="margin-top:24px; width:100%; justify-content:center;" target="_blank" rel="noopener noreferrer">Book Workshop Slot →</a>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="glass-card reveal" style="padding:40px 32px;" id="course4">
+          <span style="font-size:2.5rem; display:block; margin-bottom:16px; animation:float 5s ease-in-out 3.6s infinite;">🌟</span>
+          <h3 style="font-family:var(--font-heading); font-size:1.6rem; color:var(--rose-gold); margin:14px 0 10px;">5 Days Basic Makeup Course</h3>
+          <p style="font-size:0.85rem; color:rgba(253,253,253,0.55); line-height:1.7; margin-bottom:20px;">Beginner-friendly course covering skin prep, foundation matching, party look, and basic bridal makeup looks.</p>
+          
+          <table class="course-table">
+            <tr><th>Duration</th><th>Fees</th><th>Certificate</th></tr>
+            <tr><td>5 Days</td><td>₹6,999 Only</td><td>✅ Included</td></tr>
+          </table>
+
+          <div class="syllabus-accordion" style="border:none; padding-top:0;">
+            <div class="syllabus-fee-card" style="margin-top:20px; margin-bottom:0;">
+              <ul style="display:flex; flex-direction:column; gap:8px; font-size:0.8rem; color:rgba(253,253,253,0.7);">
+                <li>✨ Skin Prep & Foundation Matching</li>
+                <li>✨ Party Look & basic bridal eye makeup</li>
+                <li>✨ 2 Bridal Looks & 2 Hairstyles</li>
+                <li>✨ 2 Saree Draping styles & practice</li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="https://wa.me/917030901505?text=Hi%20Uday%20Academy!%20I%27m%20interested%20in%20the%205-Day%20Basic%20Makeup%20Course." class="btn btn-primary" style="margin-top:24px; width:100%; justify-content:center;" target="_blank" rel="noopener noreferrer">Enquire Now →</a>
+        </div>
+
+        <!-- Course 5 -->
+        <div class="glass-card reveal" style="padding:40px 32px;" id="course5">
+          <span style="font-size:2.5rem; display:block; margin-bottom:16px; animation:float 5s ease-in-out 4.8s infinite;">👰</span>
+          <span class="badge-pill" style="background:rgba(225,179,130,0.1); color:var(--rose-gold);">Specialized Course</span>
+          <h3 style="font-family:var(--font-heading); font-size:1.6rem; color:var(--rose-gold); margin:14px 0 10px;">Bridal Makeup Course</h3>
+          <p style="font-size:0.85rem; color:rgba(253,253,253,0.55); line-height:1.7; margin-bottom:20px;">Dedicated professional training for bridal HD look, hairstyles, draping, and hands-on practice on live models.</p>
+          
+          <table class="course-table">
+            <tr><th>Duration</th><th>Fees</th><th>Certificate</th></tr>
+            <tr><td>15 Days</td><td>₹18,000 Only</td><td>✅ Included</td></tr>
+          </table>
+
+          <div class="syllabus-accordion" style="border:none; padding-top:0;">
+            <div class="syllabus-fee-card" style="margin-top:20px; margin-bottom:0;">
+              <ul style="display:flex; flex-direction:column; gap:8px; font-size:0.8rem; color:rgba(253,253,253,0.7);">
+                <li>✨ Skin Prep, HD makeup, color correction</li>
+                <li>✨ 3 Bridal Looks (Haldi, Vedic, Reception)</li>
+                <li>✨ 3 bridal hairstyles & 3 Saree Draping styles</li>
+                <li>✨ Jewellery setting & Live Model practice</li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="https://wa.me/917030901505?text=Hi%20Uday%20Academy!%20I%27m%20interested%20in%20the%2015-Day%20Bridal%20Makeup%20Course." class="btn btn-primary" style="margin-top:24px; width:100%; justify-content:center;" target="_blank" rel="noopener noreferrer">Enquire Now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CERTIFICATIONS ======== -->
+  <section aria-label="Certifications and recognition">
+    <div class="container">
+      <div class="reveal" style="text-align:center; margin-bottom:10px;">
+        <p class="section-label">✦ Recognition</p>
+        <h2 class="section-title">Your Certificate, Your <span class="text-gradient">Credential</span></h2>
+      </div>
+      <div class="cert-grid">
+        <div class="glass-card cert-card reveal" id="cert1">
+          <span class="cert-icon">📜</span>
+          <h4>Industry Certification</h4>
+          <p>Receive a diploma recognized by beauty industry professionals across Maharashtra and India.</p>
+        </div>
+        <div class="glass-card cert-card reveal" id="cert2">
+          <span class="cert-icon">🌐</span>
+          <h4>International Curriculum</h4>
+          <p>Our courses are aligned with global beauty standards — MAC Pro, CIDESCO-inspired techniques.</p>
+        </div>
+        <div class="glass-card cert-card reveal" id="cert3">
+          <span class="cert-icon">👩‍🎓</span>
+          <h4>Alumni Community</h4>
+          <p>Lifetime access to our alumni group, mentor support, and continued learning resources.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== ENROLLMENT CTA ======== -->
+  <section aria-label="Enrollment call to action">
+    <div class="container">
+      <div class="enrollment-cta reveal" id="enrollmentCta">
+        <p class="section-label">✦ Limited Batch Seats ✦</p>
+        <h2 class="section-title" style="margin-bottom:1rem;">
+          Start Your Journey to<br /><span class="text-gradient">Beauty Mastery Today</span>
+        </h2>
+        <p style="font-size:0.95rem; color:rgba(253,253,253,0.55); max-width:520px; margin:0 auto 2.5rem; line-height:1.8;">
+          New batch starting soon — limited seats available. Don't miss this chance to transform your passion into a flourishing career.
+        </p>
+        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-glow" id="enrollNowBtn" style="font-size:1rem; padding:18px 44px;">
+            🎓 Enroll in Next Batch
+          </a>
+          <a href="https://wa.me/917030901505?text=Hi%20Uday%20Beauty!%20I%27d%20like%20to%20know%20about%20academy%20courses." 
+             class="btn btn-outline" id="enrollWaBtn" target="_blank" rel="noopener noreferrer">
+            💬 Ask on WhatsApp
+          </a>
+        </div>
+        <p style="margin-top:1.5rem; font-size:0.75rem; color:rgba(253,253,253,0.3); letter-spacing:1px;">FREE DEMO CLASS AVAILABLE · FLEXIBLE TIMINGS · EMI OPTIONS</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Uday Beauty Home">
+            <img src="assets/images/logo.jpeg" alt="Uday Beauty Logo" class="footer-logo-img" />
+            <div class="footer-logo-text">
+              <span class="logo-main">Uday Beauty</span>
+              <span class="logo-sub">Salon · Studio · Academy</span>
+            </div>
+          </a>
+          <p>Building the next generation of beauty professionals in Chalisgaon since 2012.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/share/14qCMHMjShj/" target="_blank" class="social-pill" aria-label="Facebook Makeup Studio">👍 FB - Makeup Studio</a>
+            <a href="https://www.facebook.com/share/1ChvfpWyxH/" target="_blank" class="social-pill" aria-label="Facebook Salon">👍 FB - Salon</a>
+            <a href="https://www.instagram.com/udaymakeupstudio_academy?igsh=aDlqM3J6NDI4anAy" target="_blank" class="social-pill" aria-label="Instagram Makeup Studio">📸 IG - Makeup Studio</a>
+            <a href="https://www.instagram.com/udaybeautysalon_academy?igsh=MTB6dWdmMDYwc3h3ZQ==" target="_blank" class="social-pill" aria-label="Instagram Salon">📸 IG - Salon</a>
+            <a href="#" target="_blank" class="social-pill" aria-label="Google Review">&#11088; Leave a Review</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="academy.html">Academy</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Courses</h4>
+          <ul>
+            <li><a href="#">Makeup Artistry</a></li>
+            <li><a href="#">Bridal Masterclass</a></li>
+            <li><a href="#">Hair Styling</a></li>
+            <li><a href="#">Demo Class</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+917030901505">📞 +91 7030901505</a></li>
+            <li><a href="contact.html">📍 Bhadgaon Road, Chalisgaon</a></li>
+            <li><a href="contact.html">🕐 Mon–Sat: 9 AM – 6 PM</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="areas-served">
+        <h5>📍 Academy Serving Students From</h5>
+        <p>Uday Beauty Academy accepts students from Chalisgaon, Dhule, Jalgaon, Pachora, Manmad, Nandgaon, Kopargaon, Nashik, Shrirampur, Yeola, Chandwad, and all surrounding talukas. Best Makeup Academy Jalgaon District | Certified Beauty Course Dhule | Top Makeup Training Chalisgaon.</p>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Uday Beauty Salon, Make-up Studio & Academy, Chalisgaon. All Rights Reserved.</p>
+        <p style="color:rgba(225,179,130,0.4);">Crafted with ♥ for every bride. Made With RGAi Technology</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======== FLOATING WHATSAPP ======== -->
+  <a href="https://wa.me/917030901505?text=Hi%21%20I%27d%20like%20to%20know%20about%20Uday%20Beauty%20Academy%20courses." 
+     class="wa-float" id="waFloat" target="_blank" rel="noopener noreferrer" aria-label="Enquire via WhatsApp">
+    <svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <div class="wa-float-text">
+      <span>Enquire on WhatsApp</span>
+      <span>Free Demo Available</span>
+    </div>
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

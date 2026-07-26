@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#E1B382" />
+  <title>Gallery | Uday Beauty Salon &amp; Academy | Chalisgaon</title>
+  <meta name="description" content="Browse stunning bridal makeup, party looks and beauty transformations by Uday Beauty Salon and Academy, Chalisgaon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .gallery-hero {
+      padding: 130px 0 60px;
+      text-align: center;
+    }
+    .gallery-grid {
+      columns: 3;
+      column-gap: 16px;
+      padding-bottom: 100px;
+    }
+    @media (max-width: 900px) { .gallery-grid { columns: 2; } }
+    @media (max-width: 540px) { .gallery-grid { columns: 1; } }
+
+    .gallery-card {
+      break-inside: avoid;
+      margin-bottom: 16px;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      border: 1px solid rgba(225,179,130,0.2);
+      -webkit-mask-image: -webkit-radial-gradient(white, black);
+    }
+    .gallery-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.55);
+    }
+    .gallery-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+      image-orientation: from-image;
+    }
+    /* Fix sideways/rotated landscape photos - force portrait display */
+    .gallery-card.rotate-fix {
+      position: relative;
+      aspect-ratio: 2 / 3;
+      overflow: hidden;
+    }
+    .gallery-card.rotate-fix img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150%;
+      height: auto;
+      transform: translate(-50%, -50%) rotate(90deg);
+      object-fit: cover;
+    }
+    .gallery-card.rotate-fix:hover img {
+      transform: translate(-50%, -50%) rotate(90deg) scale(1.04);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.93);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox-inner {
+      position: relative;
+      max-width: 90vw;
+      max-height: 90vh;
+    }
+    .lightbox-inner img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+      display: block;
+    }
+    .lightbox-close {
+      position: fixed;
+      top: 20px; right: 28px;
+      font-size: 2.5rem;
+      color: rgba(255,255,255,0.8);
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.2s;
+      z-index: 10000;
+      background: rgba(0,0,0,0.5);
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .lightbox-close:hover { color: #E1B382; }
+  </style>
+</head>
+<body>
+
+  <!-- ======== NAVBAR ======== -->
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Uday Beauty Salon Home">
+          <img src="assets/images/logo.jpeg" alt="Uday Beauty Logo" class="nav-logo-img" />
+          <div class="nav-logo-text">
+            <span class="logo-main">Uday Beauty</span>
+            <span class="logo-sub">Salon &middot; Studio &middot; Academy</span>
+          </div>
+        </a>
+        <ul class="nav-links" id="navLinks" role="menu">
+          <li><a href="index.html" role="menuitem">Home</a></li>
+          <li><a href="services.html" role="menuitem">Services</a></li>
+          <li><a href="academy.html" role="menuitem">Academy</a></li>
+          <li><a href="gallery.html" class="active" role="menuitem">Gallery</a></li>
+          <li><a href="contact.html" class="nav-cta" role="menuitem">Book Now</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <div class="gallery-hero">
+    <div class="container">
+      <p class="section-label">Portfolio</p>
+      <h1 class="section-title">Our <span class="text-gradient">Gallery</span></h1>
+      <p class="section-subtitle" style="margin:0 auto;">
+        A curated collection of our finest bridal transformations, party looks &amp; beauty artistry.
+      </p>
+    </div>
+  </div>
+
+  <!-- ======== GALLERY GRID ======== -->
+  <div class="container">
+    <div class="gallery-grid reveal">
+
+      <div class="gallery-card">
+        <img src="Images/01-2.jpg" alt="Bridal Makeup by Uday Beauty" loading="lazy" />
+      </div>
+
+      <div class="gallery-card">
+        <img src="Images/02-2.jpg" alt="Bridal Look - Before" loading="lazy" />
+      </div>
+
+      <div class="gallery-card">
+        <img src="Images/03-1.jpg" alt="Bridal Look - After Transformation" loading="lazy" />
+      </div>
+
+      <div class="gallery-card">
+        <img src="Images/09-1.jpg" alt="Beauty Look by Uday Studio" loading="lazy" />
+      </div>
+
+      <div class="gallery-card">
+        <img src="Images/0C6A7899.jpg" alt="Professional Bridal Shoot" loading="lazy" />
+      </div>
+
+      <div class="gallery-card">
+        <img src="Images/0C6A7913.jpg" alt="Elegant Bridal Portrait" loading="lazy" />
+      </div>
+
+      <div class="gallery-card">
+        <img src="Images/2O4A0120..jpg" alt="Uday Beauty Portfolio" loading="lazy" />
+      </div>
+
+      <div class="gallery-card">
+        <img src="Images/2O4A0150..jpg" alt="Uday Beauty Portfolio 2" loading="lazy" />
+      </div>
+
+      <div class="gallery-card">
+        <img src="Images/IMG-20240619-WA0033.jpg" alt="Academy Training Session" loading="lazy" />
+      </div>
+
+      <div class="gallery-card rotate-fix">
+        <img src="Images/IMG-20240914-WA0075.jpg" alt="Uday Beauty Work" loading="lazy" />
+      </div>
+
+      <div class="gallery-card rotate-fix">
+        <img src="Images/IMG-20241001-WA0036.jpg" alt="Bridal Makeup Session" loading="lazy" />
+      </div>
+
+      <div class="gallery-card">
+        <img src="Images/IMG_20241006_100659.jpg" alt="Uday Beauty Studio" loading="lazy" />
+      </div>
+
+      <div class="gallery-card">
+        <img src="Images/IMG_20250807_075322.jpg" alt="Latest Work by Uday Beauty" loading="lazy" />
+      </div>
+
+      <div class="gallery-card">
+        <img src="Images/InShot_20240809_105002938.jpg" alt="Beauty Transformation" loading="lazy" />
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose" title="Close">&#x2715;</span>
+    <div class="lightbox-inner">
+      <img src="" alt="" id="lightboxImg" />
+    </div>
+  </div>
+
+  <!-- ======== FOOTER ======== -->
+  <footer aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Uday Beauty Home">
+            <img src="assets/images/logo.jpeg" alt="Uday Beauty Logo" class="footer-logo-img" />
+            <div class="footer-logo-text">
+              <span class="logo-main">Uday Beauty</span>
+              <span class="logo-sub">Salon &middot; Studio &middot; Academy</span>
+            </div>
+          </a>
+          <p>Transforming lives through the art of beauty in Chalisgaon since 2012. Where every bride is royalty.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/share/14qCMHMjShj/" target="_blank" class="social-pill" aria-label="Facebook Makeup Studio">&#128077; FB - Makeup Studio</a>
+            <a href="https://www.facebook.com/share/1ChvfpWyxH/" target="_blank" class="social-pill" aria-label="Facebook Salon">&#128077; FB - Salon</a>
+            <a href="https://www.instagram.com/udaymakeupstudio_academy?igsh=aDlqM3J6NDI4anAy" target="_blank" class="social-pill" aria-label="Instagram Makeup Studio">&#128248; IG - Makeup Studio</a>
+            <a href="https://www.instagram.com/udaybeautysalon_academy?igsh=MTB6dWdmMDYwc3h3ZQ==" target="_blank" class="social-pill" aria-label="Instagram Salon">&#128248; IG - Salon</a>
+            <a href="#" target="_blank" class="social-pill" aria-label="Google Review">&#11088; Leave a Review</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="academy.html">Academy</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Book Appointment</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Bridal Makeup</a></li>
+            <li><a href="services.html">Party Makeup</a></li>
+            <li><a href="services.html">Hair Styling</a></li>
+            <li><a href="services.html">Skin Care</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Uday Beauty Salon &amp; Academy. All rights reserved. Chalisgaon, Maharashtra.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Lightbox
+    const galleryImgs = document.querySelectorAll('.gallery-card img');
+    const lightbox    = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    galleryImgs.forEach(function(img) {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', function() {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  </script>
+</body>
+</html>
