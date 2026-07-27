@@ -875,6 +875,7 @@ section {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+  width: 100%;
 }
 
 .services-tabs {
@@ -885,6 +886,14 @@ section {
   border-radius: var(--radius-pill);
   border: 1px solid rgba(225, 179, 130, 0.15);
   box-shadow: var(--shadow-deep);
+  overflow-x: auto;
+  max-width: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.services-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .tab-btn {
@@ -900,6 +909,8 @@ section {
   text-transform: uppercase;
   cursor: pointer;
   transition: var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .tab-btn:hover {
