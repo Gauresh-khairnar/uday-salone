@@ -160,60 +160,64 @@ function initScrollReveal() {
    HERO SLIDESHOW
    Changes hero image every 5 seconds with fade effect.
 ======================================================== */
+function setupFadingSlideshow(imgElement, imagesArray, bgElement) {
+  if (!imgElement || !imagesArray || imagesArray.length === 0) return;
+  
+  let currentIndex = 0;
+  imgElement.style.transition = 'opacity 0.5s ease-in-out';
+  if (bgElement) bgElement.style.transition = 'opacity 0.5s ease-in-out';
+
+  let nextImage = new Image();
+  nextImage.src = imagesArray[(currentIndex + 1) % imagesArray.length];
+
+  setInterval(() => {
+    imgElement.style.opacity = '0';
+    if (bgElement) bgElement.style.opacity = '0';
+    
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % imagesArray.length;
+      imgElement.src = imagesArray[currentIndex];
+      imgElement.style.opacity = '1';
+      
+      if (bgElement) {
+        bgElement.style.backgroundImage = `url('${imagesArray[currentIndex]}')`;
+        bgElement.style.opacity = '0.15';
+      }
+      
+      nextImage = new Image();
+      nextImage.src = imagesArray[(currentIndex + 1) % imagesArray.length];
+    }, 500);
+  }, 5000);
+}
+
 function initHeroSlideshow() {
   const heroImage = document.getElementById('heroImage');
   const heroBg = document.querySelector('.hero-parallax-bg');
-  if (!heroImage) return;
-
-  const images = [
+  
+  const heroImages = [
     'Images/IMG_20241006_100659.jpg',
     'Images/IMG_20250807_075322.jpg',
     'Images/InShot_20240809_105002938.jpg',
-    'Images/IMG_3415.JPG.jpeg',
-    'Images/IMG_3421.JPG.jpeg',
-    'Images/281A8279.jpg',
-    'Images/281A8282.jpg',
-    'Images/281A8307.jpg',
     'Images/IMG_20240620_201923_561.jpg',
     'Images/IMG_20240620_201923_615.jpg',
-    'Images/IMG_20240621_195456_523.jpg',
-    'Images/IMG_20250807_075635.jpg',
     'Images/mayuri_bride_3.jpg',
     'Images/mayuri_bride_7.jpg',
     'Images/mayuri_bride_2.jpg',
-    'Images/mayuri_bride_1.jpg',
-    'Images/01-2.jpg',
-    'Images/02-2.jpg',
-    'Images/03-1.jpg',
-    'Images/09-1.jpg',
-    'Images/0C6A7899.jpg',
-    'Images/0C6A7913.jpg',
-    'Images/2O4A0120..jpg',
-    'Images/2O4A0150..jpg',
-    'Images/IMG-20240619-WA0033.jpg'
+    'Images/mayuri_bride_1.jpg'
   ];
-  let currentIndex = 0;
-
-  heroImage.style.transition = 'opacity 0.5s ease-in-out';
-  if (heroBg) {
-    heroBg.style.transition = 'opacity 0.5s ease-in-out';
-  }
-
-  setInterval(() => {
-    heroImage.style.opacity = '0';
-    if (heroBg) heroBg.style.opacity = '0';
-    
-    setTimeout(() => {
-      currentIndex = (currentIndex + 1) % images.length;
-      heroImage.src = images[currentIndex];
-      heroImage.style.opacity = '1';
-      
-      if (heroBg) {
-        heroBg.style.backgroundImage = `url('${images[currentIndex]}')`;
-        heroBg.style.opacity = '0.15';
-      }
-    }, 500);
-  }, 5000);
+  
+  setupFadingSlideshow(heroImage, heroImages, heroBg);
+  
+  const academyImage = document.getElementById('academyImage');
+  const academyImages = [
+    'Images/IMG-20240619-WA0033.jpg',
+    'Images/IMG_20240621_195456_523.jpg',
+    'Images/IMG_20250807_075635.jpg',
+    'Images/mayuri_bride_3.jpg',
+    'Images/mayuri_bride_1.jpg'
+  ];
+  
+  setupFadingSlideshow(academyImage, academyImages, null);
 }
 
 /* ========================================================
