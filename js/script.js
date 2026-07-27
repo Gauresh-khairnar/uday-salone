@@ -293,3 +293,164 @@ function initHeroSlideshow() {
     }
   }
 })();
+
+/* ========================================================
+   ANIMATED COUNTERS (TRUST SECTION)
+======================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  const statNumbers = document.querySelectorAll('.badge-num, .stat-num');
+  
+  if (!statNumbers.length) return;
+
+  const animateValue = (obj, start, end, duration, suffix = '') => {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      
+      // Easing function for smoother animation
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      let currentVal = Math.floor(easeOutQuart * (end - start) + start);
+      
+      // Keep decimals if present in original text
+      if (end % 1 !== 0) {
+          currentVal = (easeOutQuart * (end - start) + start).toFixed(1);
+      }
+
+      obj.innerHTML = currentVal + suffix;
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        obj.innerHTML = end + suffix;
+      }
+    };
+    window.requestAnimationFrame(step);
+  };
+
+  const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const text = el.innerText;
+        
+        // Don't animate emojis or non-numeric starts
+        if(text.includes('🏆') || isNaN(parseFloat(text))) return;
+        
+        let suffix = '';
+        if (text.includes('+')) suffix = '+';
+        if (text.includes('★')) suffix = '★';
+
+        const endValue = parseFloat(text.replace(/[^0-9.]/g, ''));
+        if(!isNaN(endValue)) {
+            el.innerText = '0' + suffix;
+            animateValue(el, 0, endValue, 2500, suffix);
+        }
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  statNumbers.forEach(num => counterObserver.observe(num));
+});
+
+/* ========================================================
+   ANALYTICS & EVENT TRACKING
+======================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  // Track WhatsApp Clicks
+  const waBtns = document.querySelectorAll('a[href*="wa.me"]');
+  waBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if(typeof gtag === 'function') {
+        gtag('event', 'whatsapp_click', {
+          'event_category': 'Engagement',
+          'event_label': 'WhatsApp Button'
+        });
+      }
+      if(typeof fbq === 'function') {
+        fbq('trackCustom', 'WhatsAppClick');
+      }
+    });
+  });
+
+  // Track Phone Calls
+  const callBtns = document.querySelectorAll('a[href*="tel:"]');
+  callBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if(typeof gtag === 'function') {
+        gtag('event', 'call_click', {
+          'event_category': 'Engagement',
+          'event_label': 'Phone Number'
+        });
+      }
+    });
+  });
+
+  // Track Forms
+  const forms = document.querySelectorAll('form');
+  forms.forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formId = form.getAttribute('id') || 'Contact Form';
+      
+      // Animate button to show success
+      const btn = form.querySelector('button[type="submit"]');
+      if(btn) {
+        const originalText = btn.innerText;
+        btn.innerText = "✓ Request Sent!";
+        btn.style.background = "#25D366";
+        btn.style.color = "#fff";
+        setTimeout(() => {
+          btn.innerText = originalText;
+          btn.style.background = "";
+          btn.style.color = "";
+          form.reset();
+        }, 3000);
+      }
+
+      if(typeof gtag === 'function') {
+        gtag('event', 'form_submission', {
+          'event_category': 'Lead',
+          'event_label': formId
+        });
+      }
+      if(typeof fbq === 'function') {
+        fbq('track', 'Lead');
+      }
+    });
+  });
+});
+
+/* ========================================================
+   GALLERY FILTERING
+======================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  const filterBtns = document.querySelectorAll('.gallery-hero .tab-btn');
+  const galleryCards = document.querySelectorAll('.gallery-card');
+
+  if (!filterBtns.length || !galleryCards.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Remove active class from all buttons
+      filterBtns.forEach(b => b.classList.remove('active'));
+      // Add active class to clicked button
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      galleryCards.forEach(card => {
+        if (filterValue === 'all') {
+          card.style.display = '';
+        } else {
+          if (card.getAttribute('data-category') === filterValue) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    });
+  });
+});
+
