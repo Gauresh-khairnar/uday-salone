@@ -2368,4 +2368,15 @@ footer {
 @media (max-width: 480px) {
   .music-toggle { bottom: 110px; }
   .music-waves  { bottom: 164px; }
+
+  .marquee-belt {
+    padding: 4px 0;
+  }
+  .marquee-content {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+  }
+  .marquee-content span {
+    padding: 0 20px;
+  }
 }
