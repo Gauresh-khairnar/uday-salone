@@ -309,11 +309,14 @@ section {
 }
 
 .nav-logo .logo-sub, .footer-logo-text .logo-sub, .logo-sub {
-  font-size: 0.6rem;
-  letter-spacing: 4px;
+  font-family: var(--font-body);
+  font-size: 0.55rem;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(253, 253, 253, 0.8);
-  font-weight: bold;
+  color: rgba(253, 253, 253, 0.85);
+  font-weight: 500;
+  margin-top: 0px;
+  opacity: 0.9;
 }
 
 .nav-links {
