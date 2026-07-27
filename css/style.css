@@ -729,7 +729,7 @@ section {
 }
 
 .slider-after {
-  clip-path: inset(0 50% 0 0);
+  clip-path: inset(0 0 0 50%);
 }
 
 .slider-overlay-line {
